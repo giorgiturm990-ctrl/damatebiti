@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+   // 1. ვქმნით promis
+  const myPromise = new Promise((resolve) =>  {
+    setTimeout(() => {        
+    resolve("მონაცემები მიღებულია");
+    }, 2000);
+  });
+  
+  
+  // 2. ვამუშავებთ then() მეთოდით
+  console.log("პროცესი დაიწყო...");
+
+  myPromise
+     .then((result) => {
+        // ეს ბლოკი გაეშვება 2 წამის შემდეგ
+        console.log("შედეგი (then):", result);
+     })
+       .catch ((error) => {
+         console.error("შეცდომა:", error);
+       }); 
+</script>
+
+</body>
+</html>
